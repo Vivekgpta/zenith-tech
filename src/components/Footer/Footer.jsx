@@ -19,9 +19,8 @@ export default function Footer() {
           <h2>ZENITH STUDIO</h2>
 
           <p>
-            Crafting modern digital experiences,
-            premium magazine designs and artistic
-            sketch portraits that leave a lasting impact.
+            Creating innovative digital experiences through modern web development,
+            responsive design, and performance-driven solutions.
           </p>
 
         </div>
@@ -42,10 +41,9 @@ export default function Footer() {
 
           <h4>Services</h4>
 
-          <p>Website Development</p>
-          <p>Magazine Design</p>
-          <p>Sketch Portraits</p>
-
+          <p>Modern Website Development</p>
+          <p>Responsive Web Design</p>
+          <p>Website Maintenance & Support</p>
         </div>
 
         <div className="footer-social">

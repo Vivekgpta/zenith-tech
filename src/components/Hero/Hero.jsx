@@ -13,7 +13,7 @@ export default function Hero() {
         <div className="hero-left">
 
           <span className="hero-badge">
-            Creative Developer & Artist
+            Web Developer & Designer
           </span>
 
           <h1>

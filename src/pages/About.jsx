@@ -13,14 +13,14 @@ export default function About() {
           <span>ABOUT ME</span>
 
           <h1>
-            Creative Developer,
-            Designer & Artist
+            Web Developer & Designer
           </h1>
 
           <p>
-            Building modern digital experiences and creating
-            artistic works that help businesses and individuals
-            stand out.
+            <p>
+              Building modern digital experiences and high-performance
+              websites that help businesses grow and stand out online.
+            </p>
           </p>
 
         </div>
@@ -52,9 +52,11 @@ export default function About() {
             </p>
 
             <p>
-              My goal is to transform ideas into meaningful
-              digital and creative experiences that leave
-              a lasting impression.
+              <p>
+                My goal is to transform ideas into powerful digital
+                solutions that help businesses grow and create a
+                lasting online presence.
+              </p>
             </p>
 
             <div className="about-tags">
@@ -77,23 +79,19 @@ export default function About() {
 
           <div className="experience-card">
             <h2>20+</h2>
-            <p>Business Websites Delivered</p>
+            <p>Business Websites Developed</p>
           </div>
 
           <div className="experience-card">
-            <h2>30+</h2>
-            <p>Magazine Designs Created</p>
+            <h2>15+</h2>
+            <p>Landing Pages Designed</p>
           </div>
 
           <div className="experience-card">
-            <h2>120+</h2>
-            <p>Sketch Portraits Completed</p>
+            <h2>20+</h2>
+            <p>Technologies Used</p>
           </div>
 
-          <div className="experience-card">
-            <h2>100%</h2>
-            <p>Client Satisfaction</p>
-          </div>
 
         </section>
 
@@ -132,30 +130,30 @@ export default function About() {
               <h3>Website Development</h3>
 
               <p>
-                Building modern, responsive and SEO-friendly
-                websites that help businesses grow online.
+                Building modern, responsive and high-performance
+                websites tailored to business and personal needs.
               </p>
 
             </div>
 
             <div className="expertise-card">
 
-              <h3>Magazine Design</h3>
+              <h3>Frontend Development</h3>
 
               <p>
-                Creating engaging magazine layouts for
-                colleges, events and celebrations.
+                Creating clean, interactive and user-friendly
+                interfaces using modern web technologies.
               </p>
 
             </div>
 
             <div className="expertise-card">
 
-              <h3>Sketch Portraits</h3>
+              <h3>Backend Integration</h3>
 
               <p>
-                Hyper-realistic hand-drawn portraits
-                crafted with attention to every detail.
+                Developing secure backend solutions and database
+                integrations for seamless website functionality.
               </p>
 
             </div>
@@ -228,7 +226,7 @@ export default function About() {
 
         </section>
 
-       
+
 
         {/* CTA */}
 
