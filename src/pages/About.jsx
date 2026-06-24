@@ -1,6 +1,11 @@
 import MainLayout from "../layouts/MainLayout";
 import "./About.css";
 import aboutImage from "../assets/profile.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import "swiper/css";
+
 
 export default function About() {
   return (
@@ -45,10 +50,11 @@ export default function About() {
             </h2>
 
             <p>
-              I'm a passionate freelance developer and artist
-              from India specializing in modern websites,
-              creative magazine designs and hyper-realistic
-              sketch portraits.
+              <p>
+                I'm a passionate freelance web developer from India,
+                specializing in modern, responsive websites and
+                custom digital solutions for businesses and individuals.
+              </p>
             </p>
 
             <p>
@@ -77,21 +83,53 @@ export default function About() {
 
         <section className="experience-section">
 
-          <div className="experience-card">
-            <h2>20+</h2>
-            <p>Business Websites Developed</p>
-          </div>
+          <Swiper
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            spaceBetween={20}
+            slidesPerView={1}
+            breakpoints={{
+              768: {
+                slidesPerView: 3,
+              },
+              1200: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <div className="experience-card">
+                <h2>30+</h2>
+                <p>Business Websites Developed</p>
+              </div>
+            </SwiperSlide>
 
-          <div className="experience-card">
-            <h2>15+</h2>
-            <p>Landing Pages Designed</p>
-          </div>
+            <SwiperSlide>
+              <div className="experience-card">
+                <h2>15+</h2>
+                <p>Landing Pages Designed</p>
+              </div>
+            </SwiperSlide>
 
-          <div className="experience-card">
-            <h2>20+</h2>
-            <p>Technologies Used</p>
-          </div>
+            <SwiperSlide>
+              <div className="experience-card">
+                <h2>40+</h2>
+                <p>Advance web solutions</p>
+              </div>
+            </SwiperSlide>
 
+            <SwiperSlide>
+              <div className="experience-card">
+                <h2>20+</h2>
+                <p>Technologies Used</p>
+              </div>
+            </SwiperSlide>
+
+          </Swiper>
 
         </section>
 

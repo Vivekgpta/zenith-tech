@@ -75,10 +75,13 @@
 /* STATS */
 
 .experience-section {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 25px;
   margin-bottom: 120px;
+  margin-left:50px;
+  
+}
+
+.experience-section .swiper {
+  padding: 10px;
 }
 
 .experience-card {
@@ -92,6 +95,13 @@
   backdrop-filter: blur(20px);
 
   transition: .3s;
+  width: 80%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .experience-card:hover {
