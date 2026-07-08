@@ -1,0 +1,249 @@
+/* ==========================
+   Archive Section
+========================== */
+
+.archive {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #0d0d0d;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 8%;
+}
+
+.archive-content {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 5;
+}
+
+.archive-subtitle {
+  color: #9bff2f;
+  font-size: 14px;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-transform: uppercase;
+}
+
+.robot {
+  width: 14px;
+  height: 14px;
+  background: #9bff2f;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #9bff2f;
+  animation: pulse 2s infinite;
+}
+
+.archive-title {
+  font-size: clamp(60px, 10vw, 130px);
+  color: white;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 80px;
+  max-width: 950px;
+}
+
+/* ==========================
+   Button
+========================== */
+
+.archive-btn {
+  position: relative;
+  width: 420px;
+  height: 130px;
+  border-radius: 100px;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.btn-bg {
+  position: absolute;
+  inset: 0;
+  background: #b7ff35;
+  transition: .5s;
+}
+
+.archive-btn:hover .btn-bg {
+  transform: scale(1.05);
+}
+
+.btn-content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  padding: 0 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-content h3 {
+  font-size: 28px;
+  color: black;
+  margin-bottom: 6px;
+}
+
+.btn-content span {
+  color: black;
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+
+.arrow {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: black;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  transition: .4s;
+}
+
+.archive-btn:hover .arrow {
+  transform: rotate(45deg);
+}
+
+/* ==========================
+ Floating Shapes
+========================== */
+
+.shape{
+  position:absolute;
+  border-radius:50%;
+  opacity:.18;
+  animation:float 10s ease-in-out infinite;
+}
+
+.s1{
+  width:140px;
+  height:140px;
+  border:1px solid #9bff2f;
+  top:8%;
+  left:8%;
+}
+
+.s2{
+  width:60px;
+  height:60px;
+  background:#9bff2f;
+  right:15%;
+  top:18%;
+}
+
+.s3{
+  width:100px;
+  height:100px;
+  border:1px solid #555;
+  bottom:12%;
+  left:12%;
+}
+
+.s4{
+  width:170px;
+  height:170px;
+  border:1px solid #2e2e2e;
+  bottom:6%;
+  right:8%;
+}
+
+/* ==========================
+ Magnetic Hover
+========================== */
+
+.magnetic{
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.magnetic:hover{
+    transform:translateY(-8px);
+    box-shadow:
+    0 30px 60px rgba(183,255,53,.25);
+}
+
+/* ==========================
+ Animations
+========================== */
+
+@keyframes float{
+
+0%{
+transform:translateY(0px) rotate(0);
+}
+
+50%{
+transform:translateY(-25px) rotate(180deg);
+}
+
+100%{
+transform:translateY(0px) rotate(360deg);
+}
+
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+box-shadow:0 0 0 #9bff2f;
+}
+
+50%{
+transform:scale(1.5);
+box-shadow:0 0 25px #9bff2f;
+}
+
+100%{
+transform:scale(1);
+box-shadow:0 0 0 #9bff2f;
+}
+
+}
+
+/* ==========================
+ Responsive
+========================== */
+
+@media(max-width:900px){
+
+.archive{
+padding:80px 25px;
+}
+
+.archive-title{
+font-size:60px;
+margin-bottom:50px;
+}
+
+.archive-btn{
+width:100%;
+height:100px;
+}
+
+.btn-content{
+padding:0 30px;
+}
+
+.btn-content h3{
+font-size:22px;
+}
+
+.arrow{
+width:50px;
+height:50px;
+}
+
+}

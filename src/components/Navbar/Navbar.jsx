@@ -11,7 +11,7 @@ export default function Navbar() {
     <nav className="navbar">
 
       <div className="logo">
-        Zenith Studio
+        <span>Z</span>enith Studio
       </div>
 
       {/* Right Side */}

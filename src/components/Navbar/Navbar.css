@@ -24,15 +24,20 @@
   font-size: 1.5rem;
   font-weight: 700;
 
-  background: linear-gradient(
-    90deg,
-    #7c3aed,
-    #06b6d4
-  );
+  background: #ffff;
 
+font-family: "Geist Mono", "Geist Mono Fallback";
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.logo span{
+font-size: 1.5rem;
+background: #d8ff4d;
+font-family: "Instrument Serif", "Instrument Serif Fallback";
+ -webkit-background-clip: text;
+}
+
+
 
 /* RIGHT SECTION */
 
@@ -52,13 +57,9 @@
   font-size: 0.95rem;
   font-weight: 600;
 
-  background: linear-gradient(
-    90deg,
-    #7c3aed,
-    #06b6d4
-  );
+  background: #d8ff4d;;
 
-  color: white;
+  color: black;
 
   transition: 0.3s;
 }
@@ -67,7 +68,7 @@
   transform: translateY(-3px);
 
   box-shadow:
-    0 10px 30px rgba(124, 58, 237, 0.35);
+    0 10px 30px rgba(58, 237, 91, 0.35);
 }
 
 /* DESKTOP LINKS */

@@ -29,14 +29,14 @@
 
 .hero-badge {
   display: inline-block;
-
+  margin-top: 100px;
   padding: 10px 18px;
 
   border-radius: 999px;
 
-  background: rgba(255,255,255,.05);
+  background: rgba(255, 255, 255, 0.05);
 
-  border: 1px solid rgba(255,255,255,.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 
   backdrop-filter: blur(20px);
 
@@ -44,26 +44,28 @@
 }
 
 .hero-left h1 {
-  font-size: clamp(2rem,3vw,4rem);
+  font-size: 68px;
 
   line-height: 1;
 
   font-weight: 400;
-
+  font-family: "Instrument Serif", "Instrument Serif Fallback";
   margin-bottom: 25px;
 }
 
 .hero-left h1 span {
   display: block;
-
-  background: linear-gradient(
-    90deg,
-    #7c3aed,
-    #06b6d4
-  );
+  font-style: italic;
+  background: #a9a8a8;
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.hero-website {
+  color: #d8ff4d;
+  font-size: 78px;
+  font-family: "Instrument Serif", "Instrument Serif Fallback";
 }
 
 .hero-left p {
@@ -96,7 +98,7 @@
 
   font-weight: 600;
 
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .primary-btn {
@@ -109,11 +111,11 @@
 }
 
 .secondary-btn {
-  border: 1px solid rgba(255,255,255,.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 
   backdrop-filter: blur(20px);
 
-  background: rgba(255,255,255,.05);
+  background: rgba(255, 255, 255, 0.05);
 
   color: white;
 }
@@ -135,8 +137,7 @@
 
   border-radius: 30px;
 
-  box-shadow:
-    0 30px 80px rgba(0,0,0,.4);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
 }
 
 .hero-overlay {
@@ -150,7 +151,7 @@
 
   background: #7c3aed;
 
-  opacity: .15;
+  opacity: 0.15;
 
   filter: blur(180px);
 
@@ -167,36 +168,33 @@
 
   color: #a1a1aa;
 
-  font-size: .9rem;
+  font-size: 0.9rem;
 
   animation: float 2s infinite;
 }
 
 @keyframes float {
   50% {
-    transform:
-      translateX(-50%)
-      translateY(-10px);
+    transform: translateX(-50%) translateY(-10px);
   }
 }
 
-@media(max-width:992px){
+@media (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr;
 
-  .hero-container{
-    grid-template-columns:1fr;
-
-    text-align:center;
+    text-align: center;
   }
 
-  .hero-left p{
-    margin:auto auto 40px;
+  .hero-left p {
+    margin: auto auto 40px;
   }
 
-  .hero-buttons{
-    justify-content:center;
+  .hero-buttons {
+    justify-content: center;
   }
 
-  .hero-right{
-    margin-top:40px;
+  .hero-right {
+    margin-top: 40px;
   }
 }

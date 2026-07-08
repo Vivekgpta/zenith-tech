@@ -1,0 +1,49 @@
+.custom-cursor{
+    position:fixed;
+    left:0;
+    top:0;
+
+    width:22px;
+    height:22px;
+
+    border-radius:50%;
+    background:#b7ff35;
+
+    pointer-events:none;
+
+    transform:translate(-50%,-50%);
+
+    z-index:999999;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:
+        width .35s ease,
+        height .35s ease,
+        transform .15s ease,
+        background .35s ease,
+        border-radius .35s ease;
+
+    mix-blend-mode:difference;
+}
+
+.custom-cursor span{
+    color:#000;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:2px;
+    opacity:0;
+    transition:.3s;
+}
+
+.custom-cursor.active{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+}
+
+.custom-cursor.active span{
+    opacity:1;
+}
