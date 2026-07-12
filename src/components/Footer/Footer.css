@@ -107,11 +107,7 @@
   color: white;
 
   background:
-    linear-gradient(
-      135deg,
-      #7c3aed,
-      #06b6d4
-    );
+   #d8ff39;
 
   transition: .3s;
 }

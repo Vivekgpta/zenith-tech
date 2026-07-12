@@ -29,7 +29,7 @@
   width: 500px;
   height: 500px;
 
-  background: #7c3aed;
+  background: #d8ff39;
 
   filter: blur(180px);
 
@@ -70,11 +70,7 @@
 
 .cta h2 span {
   background:
-    linear-gradient(
-      90deg,
-      #7c3aed,
-      #06b6d4
-    );
+   #d8ff39;
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

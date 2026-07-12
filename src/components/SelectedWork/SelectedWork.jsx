@@ -1,5 +1,8 @@
 import "./SelectedWork.css";
 import projectImg from "../../assets/img1.jpg"; // Replace with your image
+import projectImg2 from "../../assets/projects/velora.png";
+import projectImg3 from "../../assets/projects/premkiframe.png";
+import projectImg1 from "../../assets/projects/vkclean.png";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -70,7 +73,7 @@ export default function SelectedWork() {
 
         <div className="sw-project">
           <div className="sw-image">
-            <img src={projectImg} alt="Project" />
+            <img src={projectImg1} alt="Project" />
 
             <div className="sw-bottom-bar">
               <div className="tech">● WORDPRESS + WOOCOMMERCE</div>
@@ -110,7 +113,7 @@ export default function SelectedWork() {
         <div className="sw-project">
           {/* Image Left */}
           <div className="sw-image">
-            <img src={projectImg} alt="Project" />
+            <img src={projectImg2} alt="Project" />
 
             <div className="sw-bottom-bar">
               <div className="tech">● WORDPRESS + WOOCOMMERCE</div>
@@ -138,7 +141,7 @@ export default function SelectedWork() {
 
             <div className="buttons">
               <a href="#">Read Case Study ↗</a>
-              <a href="https://velora-gold-luxe.lovable.app/" target="_blank">
+              <a href="https://the-velora.netlify.app/" target="_blank">
                 Visit Live
               </a>
             </div>
@@ -149,7 +152,7 @@ export default function SelectedWork() {
       <section className="selected-work">
         <div className="sw-project">
           <div className="sw-image">
-            <img src={projectImg} alt="Project" />
+            <img src={projectImg3} alt="Project" />
 
             <div className="sw-bottom-bar">
               <div className="tech">● WORDPRESS + WOOCOMMERCE</div>

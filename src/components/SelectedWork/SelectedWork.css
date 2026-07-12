@@ -1,8 +1,13 @@
+/* ==========================
+   Selected Work - Base CSS
+========================== */
+
 .selected-work {
   width: 100%;
   padding: 80px 8%;
   background: #090909;
   color: #fff;
+  overflow: hidden;
 }
 
 .sw-top {
@@ -11,8 +16,8 @@
   align-items: flex-end;
   gap: 80px;
   margin-bottom: 80px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .sw-left {
@@ -20,7 +25,7 @@
 }
 
 .sw-number {
-  color: #b8ff3d;
+  color: #d8ff38;
   font-size: 14px;
   font-weight: 600;
 }
@@ -29,21 +34,21 @@
   display: inline-block;
   width: 70px;
   height: 1px;
-  background: #666;
+  background: #555;
   margin: 0 15px;
 }
 
 .sw-small-title {
   color: #999;
+  font-size: 13px;
   letter-spacing: 3px;
-  font-size: 14px;
 }
 
 .sw-left h2 {
   margin-top: 25px;
   font-size: 76px;
-  font-weight: 300;
   line-height: 1.05;
+  font-weight: 300;
   font-family: "Cormorant Garamond", serif;
 }
 
@@ -51,7 +56,6 @@
   font-style: italic;
   color: #a9a8a8;
 }
-
 
 .sw-right {
   max-width: 360px;
@@ -62,174 +66,476 @@
   line-height: 1.8;
 }
 
+/* ==========================
+      Project Layout
+========================== */
+
 .sw-project {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
-  gap: 60px;
+  gap: 70px;
   align-items: center;
 }
 
+/* ==========================
+        Image
+========================== */
+/* ==========================
+        Image
+========================== */
+
 .sw-image {
   position: relative;
+  width: 100%;
+  max-width: 608px;
+  aspect-ratio: 608 / 341;
   overflow: hidden;
-  width: 600px;
-  height: 354px;
   border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255,255,255,.08);
+  justify-self: center;
+  cursor: pointer;
+  margin: 0 auto 40px;
+  transition: transform .45s ease, box-shadow .45s ease;
 }
 
 .sw-image img {
   width: 100%;
+  height: 80%;
+  object-fit: cover;
   display: block;
-  transition: 0.6s;
+  transition: transform .8s ease;
+}
+
+.sw-image:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0,0,0,.35);
 }
 
 .sw-image:hover img {
   transform: scale(1.05);
 }
 
-.sw-bottom-bar {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 25px;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(15px);
-}
-
-.tech {
-  font-size: 11px;
-  color: #d6d6d6;
-  letter-spacing: 1px;
-}
-
-.year {
-  font-size: 11px;
-  color: #999;
-}
-
-.project-count {
-  color: #d8ff38;
-  font-size: 14px;
-  margin-bottom: 20px;
-  position: relative;
-  padding-left: 80px;
-}
-
-.project-count::before {
+.sw-image::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: 50%;
-  width: 60px;
-  height: 1px;
-  background: #555;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.45),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: .45s ease;
 }
 
-.category {
-  color: #999;
-  font-size: 10px;
-  letter-spacing: 3px;
-  margin-bottom: 20px;
+.sw-image:hover::after {
+  opacity: 1;
 }
 
-.sw-content h3 {
-  font-size: 44px;
-  font-family: Georgia, serif;
-  font-weight: 300;
-  margin-bottom: 20px;
+/* ==========================
+     Bottom Glass Bar
+========================== */
+
+.sw-bottom-bar{
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 22px;
+  background:rgba(0,0,0,.55);
+  backdrop-filter:blur(15px);
 }
 
-.sw-content h4 {
-  color: #d8ff38;
-  font-style: italic;
-  margin-bottom: 25px;
-  font-weight: 300;
+.tech,
+.year{
+  font-size:11px;
+  color:#d8d8d8;
+  letter-spacing:1px;
 }
 
-.desc {
-  color: #aaa;
-  line-height: 1.5;
-  font-size: 14px;
-  margin-bottom: 15px;
+/* ==========================
+      Content
+========================== */
+
+.project-count{
+  position:relative;
+  padding-left:80px;
+  margin-bottom:20px;
+  color:#d8ff38;
+  font-size:14px;
 }
 
-.badge {
-  display: inline-block;
-  padding: 12px 22px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 40px;
-  color: #cfcfcf;
-  margin-bottom: 40px;
-  font-size: 13px;
-  letter-spacing: 2px;
+.project-count::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:50%;
+  width:60px;
+  height:1px;
+  background:#555;
 }
 
-.buttons {
-  display: flex;
-  gap: 35px;
+.category{
+  font-size:10px;
+  letter-spacing:3px;
+  color:#999;
+  margin-bottom:20px;
 }
 
-.buttons a {
-  font-size: 14px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.35s;
+.sw-content h3{
+  font-size:44px;
+  font-weight:300;
+  font-family:"Cormorant Garamond",serif;
+  margin-bottom:20px;
 }
 
-.buttons a:hover {
-  color: #d8ff38;
+.sw-content h4{
+  color:#d8ff38;
+  font-style:italic;
+  font-weight:300;
+  margin-bottom:25px;
+  font-size:24px;
 }
 
-@media (max-width: 992px) {
-  .sw-top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .sw-left h2 {
-    font-size: 56px;
-  }
-
-  .sw-project {
-    grid-template-columns: 1fr;
-  }
-
-  .sw-content h3 {
-    font-size: 46px;
-  }
+.desc{
+  color:#aaa;
+  line-height:1.7;
+  font-size:15px;
+  margin-bottom:20px;
 }
 
-@media (max-width: 600px) {
-  .selected-work {
-    padding: 80px 25px;
-  }
-
-  .sw-left h2 {
-    font-size: 42px;
-  }
-
-  .sw-content h3 {
-    font-size: 36px;
-  }
-
-  .buttons {
-    flex-direction: column;
-    gap: 18px;
-  }
+.badge{
+  display:inline-block;
+  padding:12px 22px;
+  border-radius:50px;
+  border:1px solid rgba(255,255,255,.12);
+  color:#ddd;
+  font-size:12px;
+  letter-spacing:2px;
+  margin-bottom:35px;
 }
 
-/* Reverse Layout */
-.reverse .sw-project {
-  direction: rtl;
+.buttons{
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+
+.buttons a{
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  transition:.35s;
+}
+
+.buttons a:hover{
+  color:#d8ff38;
+}
+
+/* ==========================
+      Reverse Layout
+========================== */
+
+.reverse .sw-project{
+  direction:rtl;
 }
 
 .reverse .sw-content,
-.reverse .sw-image {
-  direction: ltr;
+.reverse .sw-image{
+  direction:ltr;
 }
+
+
+
+/* ==========================
+        1200px
+========================== */
+
+@media (max-width:1200px){
+
+  .selected-work{
+    padding:70px 6%;
+  }
+
+  .sw-top{
+    gap:50px;
+    margin-bottom:60px;
+  }
+
+  .sw-left h2{
+    font-size:64px;
+  }
+
+  .sw-project{
+    grid-template-columns:1.3fr 1fr;
+    gap:50px;
+  }
+
+  .sw-image{
+    max-width:540px;
+  }
+  .sw-content h3{
+    font-size:38px;
+  }
+
+  .sw-content h4{
+    font-size:22px;
+  }
+
+}
+
+
+/* ==========================
+        992px
+========================== */
+
+@media (max-width:992px){
+
+  .selected-work{
+    padding:60px 5%;
+  }
+
+  .sw-top{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:25px;
+    margin-bottom:50px;
+  }
+
+  .sw-right{
+    max-width:100%;
+  }
+
+  .sw-left h2{
+    font-size:54px;
+  }
+
+  .sw-project{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .reverse .sw-project{
+    direction:ltr;
+  }
+
+  .sw-image{
+    width:100%;
+    max-width:100%;
+    aspect-ratio:16/9;
+  }
+
+  .sw-content{
+    width:100%;
+  }
+
+}
+
+
+/* ==========================
+        768px
+========================== */
+
+@media (max-width:768px){
+
+  .selected-work{
+    padding:55px 30px;
+  }
+ .sw-image{
+    border-radius:18px;
+  }
+  .sw-left h2{
+    font-size:46px;
+    line-height:1.1;
+  }
+
+  .sw-small-title{
+    font-size:12px;
+  }
+
+  .sw-project{
+    gap:30px;
+  }
+
+  .project-count{
+    padding-left:60px;
+  }
+
+  .project-count::before{
+    width:45px;
+  }
+
+  .sw-content h3{
+    font-size:34px;
+  }
+
+  .sw-content h4{
+    font-size:20px;
+  }
+
+  .desc{
+    font-size:14px;
+    line-height:1.8;
+  }
+
+  .buttons{
+    gap:18px;
+    flex-wrap:wrap;
+  }
+
+}
+
+/* ==========================
+        576px
+========================== */
+
+@media (max-width:576px){
+
+  .selected-work{
+    padding:50px 20px;
+  }
+
+  .sw-top{
+    margin-bottom:40px;
+    padding-bottom:30px;
+    gap:20px;
+  }
+
+  .sw-number{
+    font-size:12px;
+  }
+
+  .sw-line{
+    width:40px;
+    margin:0 10px;
+  }
+
+  .sw-small-title{
+    font-size:11px;
+    letter-spacing:2px;
+  }
+
+  .sw-left h2{
+    font-size:38px;
+    line-height:1.15;
+  }
+
+  .project-count{
+    padding-left:50px;
+    font-size:12px;
+  }
+
+  .project-count::before{
+    width:35px;
+  }
+
+  .category{
+    font-size:9px;
+    letter-spacing:2px;
+  }
+
+  .sw-content h3{
+    font-size:30px;
+    margin-bottom:15px;
+  }
+
+  .sw-content h4{
+    font-size:18px;
+    margin-bottom:18px;
+  }
+
+  .desc{
+    font-size:13px;
+    line-height:1.8;
+  }
+
+  .badge{
+    font-size:11px;
+    padding:10px 16px;
+    margin-bottom:25px;
+  }
+
+  .buttons{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:14px;
+  }
+
+  .buttons a{
+    font-size:13px;
+  }
+
+  .sw-image{
+    border-radius:18px;
+  }
+
+  .sw-bottom-bar{
+    padding:12px 16px;
+  }
+
+  .tech,
+  .year{
+    font-size:10px;
+  }
+
+}
+
+
+/* ==========================
+        420px
+========================== */
+
+@media (max-width:420px){
+
+  .selected-work{
+    padding:40px 16px;
+  }
+
+  .sw-left h2{
+    font-size:32px;
+  }
+
+  .sw-content h3{
+    font-size:26px;
+  }
+
+  .sw-content h4{
+    font-size:16px;
+  }
+
+  .desc{
+    font-size:12px;
+  }
+
+  .badge{
+    width:100%;
+    text-align:center;
+  }
+
+  .buttons{
+    width:100%;
+  }
+
+  .buttons a{
+    width:100%;
+    padding:12px 16px;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:50px;
+    text-align:center;
+    transition:.35s;
+  }
+
+  .buttons a:hover{
+    background:#d8ff38;
+    color:#111;
+    border-color:#d8ff38;
+  }
+
+  .sw-image{
+    border-radius:14px;
+  }
+}
+

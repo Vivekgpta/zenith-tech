@@ -17,7 +17,7 @@ export default function Navbar() {
       {/* Right Side */}
       <div className="navbar-right">
 
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
 
         <a
           href="https://wa.me/919142457610"

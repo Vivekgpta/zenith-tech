@@ -21,13 +21,13 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
 
-      <FeaturedWork />
+      {/* <FeaturedWork /> */}
 
-      <ClientFeedback />
+      {/* <ClientFeedback /> */}
 
-      <Stats />
+      {/* <Stats /> */}
 
-      <WhyChooseMe />
+      {/* <WhyChooseMe /> */}
 
       <CTA />
     </MainLayout>
