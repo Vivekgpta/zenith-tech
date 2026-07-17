@@ -49,7 +49,7 @@ export default function AboutSection() {
 
               <div className="year">
 
-                <span>2018</span>
+                <span>2022</span>
 
                 <FaArrowRight />
 
@@ -66,7 +66,7 @@ export default function AboutSection() {
           <div className="about-content">
 
             <h1>
-              Eight years.
+              Four years.
               <span> Two hundred </span>
               websites.
               <br />
@@ -74,8 +74,8 @@ export default function AboutSection() {
             </h1>
 
             <p>
-              I've been designing and building websites since 2018.
-              Started by self-teaching WordPress for my own affiliate
+              I've been designing and building websites since 2022.
+              Started by self-teaching React for my own affiliate
               venture, then turned that into a freelance practice.
               Cold-calling local businesses. Designing e-commerce
               stores. Building a reputation city by city.
@@ -83,8 +83,8 @@ export default function AboutSection() {
 
             <p>
               Today I'm a one-person studio working with founders in
-              the US, UK and India. I've shipped
-              <strong> 200+ websites </strong>
+               India. I've shipped
+              <strong> 25+ websites </strong>
               across 12+ industries: premium D2C, SaaS landing pages,
               industrial B2B, artisan F&B, premium jewellery and
               EdTech.

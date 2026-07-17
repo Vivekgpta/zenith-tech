@@ -65,7 +65,7 @@ export default function SelectedWork() {
 
           <div className="sw-right">
             <p>
-              Seven featured. Out of 200+ shipped across 8 years. Click any to
+              Seven featured. Out of 25+ shipped across 4 years. Click any to
               read the full case study.
             </p>
           </div>

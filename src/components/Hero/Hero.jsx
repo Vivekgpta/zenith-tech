@@ -18,12 +18,11 @@ export default function Hero() {
           </h1>
 
           <p>
-            I help businesses establish a strong online presence through modern
-            websites, creative design, and premium digital experiences.
+ I'm Vivek Kumar. I design and build digital experiences that turn attention into customers. 25+ websites shipped across 12+ industries. Strategy first. Pixels second. Conversion always.
           </p>
 
           <div className="hero-buttons">
-            <Link to="/work" className="primary-btn">
+            <Link to="/" className="primary-btn">
               View Work
             </Link>
 
